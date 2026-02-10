@@ -1,130 +1,161 @@
-# 🔍 Headless CRUD Validator for Microservices
+# Prashanth Galagali - SDET Portfolio
 
-## Overview
-A headless validation framework that cross-validates **API responses against database state** to ensure data integrity across microservices — without requiring a UI layer.
+A modern, interactive portfolio showcasing my expertise in Software Development Engineering in Test (SDET), automation frameworks, and quality engineering.
 
-This tool is designed for backend QA engineers who need to verify that what the API returns is **exactly** what the database stores.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://your-portfolio-url.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/galagaliprashant/prashanth-s-sdet-portfolio-studio)
 
----
+## 🚀 About
 
-## 🏗️ Architecture
+This portfolio highlights my professional journey as an SDET and Automation Engineer, featuring:
 
-```
-Headless-CRUD-Validator/
-├── api_framework/
-│   ├── __init__.py
-│   └── api_client.py          # Reusable REST API client (GET, POST)
-├── utils/
-│   ├── __init__.py
-│   └── db_manager.py          # SQLite database manager with CRUD operations
-├── tests/
-│   ├── __init__.py
-│   ├── conftest.py            # Pytest fixtures (DB setup/teardown)
-│   ├── test_database.py       # Database CRUD operation tests
-│   └── test_users.py          # User-specific validation tests
-└── README.md
-```
+- **Featured Projects**: Comprehensive automation frameworks and testing solutions
+- **Case Studies**: In-depth technical write-ups of key projects
+- **Skills & Expertise**: API, Web, Mobile automation, and continuous testing
+- **Contact Information**: Easy ways to connect and collaborate
 
----
+## ✨ Featured Projects
 
-## 💡 What Problem Does This Solve?
+### 🔥 Headless CRUD Validator for Microservices
+**Performance Improvement: 97% (45s → 1.2s)**
 
-In microservice architectures, **data inconsistency** between the API layer and the database is a critical bug source. This tool:
+A lightweight Python CRUD Bot that validates Booking Engine core logic without UI dependencies. This project demonstrates:
+- Stateful execution with dynamic authentication
+- Deep JSON schema validation
+- Self-cleaning teardown mechanisms
+- CI/CD pipeline integration
 
-1. **Seeds a local database** with expected data (mirroring the backend)
-2. **Runs automated validations** to verify CRUD operations work correctly
-3. **Cross-references API responses** against database records
-4. **Catches data drift** — when what the API returns doesn't match what's stored
+[📖 Read the full case study](/case-study/headless-crud-validator)
 
----
+### Other Projects
+- **API Test Framework**: RestAssured + TestNG with Allure reporting
+- **E2E Web Automation Suite**: Selenium + Cucumber + Jenkins
+- **Cypress Test Dashboard**: Real-time test analytics and reporting
+- **Mobile Test Automation**: Cross-platform Appium testing
+- **Performance Testing Toolkit**: JMeter + Grafana integration
 
-## 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
-| Component | Technology |
-|---|---|
-| **Language** | Python 3.9+ |
-| **Test Runner** | Pytest (Fixtures, Parametrize, Markers) |
-| **Database** | SQLite (lightweight, no server needed) |
-| **API Client** | Requests library |
-| **Architecture** | Modular — separates API, DB, and test layers |
+### Frontend
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Routing**: React Router v6
 
----
+### Testing & Automation
+- **Languages**: Python, Java, JavaScript/TypeScript
+- **API Testing**: RestAssured, requests, Postman
+- **Web Automation**: Selenium, Cypress, Playwright
+- **Mobile Testing**: Appium, XCUITest, Espresso
+- **Performance**: JMeter, Grafana, InfluxDB
+- **CI/CD**: Jenkins, GitHub Actions, Docker
 
-## ⚡ Key Features
+## 🏃‍♂️ Getting Started
 
-### 1. Reusable API Client (`api_client.py`)
-- Multi-API support (ReqRes, GoRest, DummyJSON)
-- Clean GET/POST abstraction
-- Instance-based design for testing multiple backends
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-### 2. Database Manager (`db_manager.py`)
-- Auto table creation with schema definition
-- Data seeding with `INSERT OR IGNORE` (idempotent)
-- Clean query interface with parameterized queries
-- Proper connection lifecycle management
+### Installation
 
-### 3. Session-Scoped Fixtures (`conftest.py`)
-- Single database setup for entire test session
-- Automatic teardown after all tests complete
-- Dynamic method injection for flexibility
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/galagaliprashant/prashanth-s-sdet-portfolio-studio.git
+   cd prashanth-s-sdet-portfolio-studio
+   ```
 
-### 4. Comprehensive Test Suites
-- **`test_database.py`** — CRUD operations, multi-user retrieval, edge cases
-- **`test_users.py`** — Email format validation, parametrized name checks, invalid ID handling
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
----
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-## 🚀 Quick Start
+4. **Open your browser**
+   Navigate to `http://localhost:8080/`
+
+### Build for Production
 
 ```bash
-# Install dependencies
-pip install pytest requests
-
-# Run all tests
-pytest tests/ -v -s
-
-# Run specific test suite
-pytest tests/test_database.py -v -s
-pytest tests/test_users.py -v -s
-
-# Run with Allure reporting
-pytest tests/ -v -s --alluredir=allure-results
-allure serve allure-results
+npm run build
 ```
+
+The optimized production build will be in the `dist/` directory.
+
+## 📁 Project Structure
+
+```
+prashanth-s-sdet-portfolio-studio/
+├── src/
+│   ├── components/          # React components
+│   │   ├── ui/             # shadcn/ui components
+│   │   ├── HeroSection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   ├── SkillsSection.tsx
+│   │   └── ...
+│   ├── pages/              # Route pages
+│   │   ├── Index.tsx
+│   │   ├── HeadlessCrudValidatorCaseStudy.tsx
+│   │   └── NotFound.tsx
+│   ├── assets/             # Images and static files
+│   ├── lib/                # Utility functions
+│   ├── App.tsx             # Main app component
+│   └── main.tsx            # Entry point
+├── public/                 # Public assets
+├── index.html
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## 🎨 Features
+
+- **Responsive Design**: Fully responsive across all devices
+- **Dark Mode**: Modern dark theme with custom color palette
+- **Smooth Animations**: Framer Motion for engaging interactions
+- **3D Background**: Three.js integration for visual appeal
+- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Fast Performance**: Optimized with Vite for lightning-fast builds
+- **Type Safe**: Full TypeScript support
+
+## 🔗 Key Routes
+
+- `/` - Home page with all sections
+- `/case-study/headless-crud-validator` - Detailed case study
+
+## 📧 Contact
+
+- **Email**: [galagaliprashanth@gmail.com](mailto:galagaliprashanth@gmail.com)
+- **LinkedIn**: [linkedin.com/in/prasshanth-galagali](https://www.linkedin.com/in/prasshanth-galagali/)
+- **GitHub**: [github.com/galagaliprashant](https://github.com/galagaliprashant)
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but feedback and suggestions are always welcome! Feel free to:
+1. Open an issue for bugs or suggestions
+2. Fork the repository for your own portfolio
+3. Submit a pull request with improvements
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Built with [Vite](https://vitejs.dev/)
+- UI components from [shadcn/ui](https://ui.shadcn.com/)
+- Icons from [Lucide](https://lucide.dev/)
+- Animations powered by [Framer Motion](https://www.framer.com/motion/)
+- 3D graphics with [Three.js](https://threejs.org/)
 
 ---
 
-## 📊 Test Coverage
+**Made with ❤️ by Prashanth Galagali**
 
-| Test Suite | Tests | Description |
-|---|---|---|
-| `test_database.py` | 6 | CRUD ops, multi-user retrieval, connection health, parametrized email checks |
-| `test_users.py` | 7 | User existence, email format, parametrized names, invalid IDs |
-| **Total** | **13** | Full data integrity validation |
-
----
-
-## 🧪 Sample Test Output
-
-```
-tests/test_database.py::TestDatabaseOperations::test_get_user_by_id PASSED
-tests/test_database.py::TestDatabaseOperations::test_get_multiple_users PASSED
-tests/test_database.py::TestDatabaseOperations::test_user_not_found PASSED
-tests/test_database.py::TestDatabaseIntegration::test_database_connection PASSED
-tests/test_database.py::TestDatabaseIntegration::test_user_emails[1-george.bluth@reqres.in] PASSED
-tests/test_database.py::TestDatabaseIntegration::test_user_emails[2-janet.weaver@reqres.in] PASSED
-tests/test_database.py::TestDatabaseIntegration::test_user_emails[3-emma.wong@reqres.in] PASSED
-tests/test_users.py::TestUserDatabase::test_verify_user_exists PASSED
-tests/test_users.py::TestUserDatabase::test_user_email_format PASSED
-tests/test_users.py::TestUserDatabase::test_user_names[1-George-Bluth] PASSED
-tests/test_users.py::TestUserDatabase::test_user_names[2-Janet-Weaver] PASSED
-tests/test_users.py::TestUserDatabase::test_user_names[3-Emma-Wong] PASSED
-tests/test_users.py::TestUserDatabase::test_invalid_user_id PASSED
-
-========================= 13 passed =========================
-```
-
----
-
-## 📬 Author
-**Prashanth Galagali** — SDET | Test Automation Engineer
+*SDET | Automation Engineer | Quality Enthusiast*
