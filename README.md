@@ -11,6 +11,8 @@ SDET-Architect-Portfolio/
 ├── 📱 Mobile-Automation-Cloud/     ← Appium 3.x + Sauce Labs RDC
 ├── 🌐 Web-Automation-Selenium/     ← Selenium + Pytest (Coming Soon)
 ├── ⚙️ API-Backend-Automation/      ← REST API + Schema Validation (Coming Soon)
+├── 🛠️ Tools-I-Have-Created/        ← Custom QA Tools & Frameworks
+│   └── Headless-CRUD-Validator/    ← API vs DB Data Integrity Validator
 └── 🎓 Certifications-And-Learnings/← AWS Cloud Practitioner & More
 ```
 
@@ -71,6 +73,32 @@ RESTful API testing framework with schema validation and data-driven testing.
 | **Runner** | Pytest |
 
 👉 [**Explore API Framework →**](./API-Backend-Automation/)
+
+---
+
+## 🛠️ Tools I Have Created
+
+### 🔍 Headless CRUD Validator for Microservices
+
+**Status**: ✅ **Complete**
+
+A headless validation framework that cross-validates API responses against database state — ensuring data integrity without a UI.
+
+| Feature | Detail |
+|---|---|
+| **Language** | Python 3.9+ |
+| **Database** | SQLite (headless, no server) |
+| **API Client** | Requests (multi-backend) |
+| **Tests** | 13 validation tests |
+| **Architecture** | Modular (API, DB, Test layers) |
+
+### Key Highlights
+- Cross-validates API responses against database records
+- Reusable API client supporting multiple backends
+- Parametrized test suites for scalable validation
+- Session-scoped fixtures for efficient test execution
+
+👉 [**Explore Headless CRUD Validator →**](./Tools-I-Have-Created/Headless-CRUD-Validator/)
 
 ---
 
